@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750">
+  <rect width="1200" height="750" fill="#0A0A0A"/>
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="26" fill="#D8D8D8">
+    <g transform="translate(330 470)">
+      <path d="M -210 0 A 210 210 0 0 1 210 0" fill="none" stroke="#2A2A2A" stroke-width="34" stroke-linecap="round"/>
+      <path d="M -210 0 A 210 210 0 0 1 114 -176" fill="none" stroke="#FF5A1F" stroke-width="34" stroke-linecap="round"/>
+      <line x1="0" y1="0" x2="96" y2="-142" stroke="#D8D8D8" stroke-width="8" stroke-linecap="round"/>
+      <circle cx="0" cy="0" r="18" fill="#D8D8D8"/>
+      <text x="-236" y="52" fill="#8A8A8A">0</text>
+      <text x="196" y="52" fill="#8A8A8A">100</text>
+    </g>
+    <g transform="translate(690 250)">
+      <text x="0" y="0" fill="#8A8A8A">tests.json</text>
+      <g transform="translate(0 40)"><rect width="340" height="22" rx="11" fill="#2A2A2A"/><rect width="272" height="22" rx="11" fill="#FF5A1F"/><text x="364" y="19">w 0.4</text></g>
+      <g transform="translate(0 100)"><rect width="340" height="22" rx="11" fill="#2A2A2A"/><rect width="218" height="22" rx="11" fill="#D8D8D8"/><text x="364" y="19">w 0.3</text></g>
+      <g transform="translate(0 160)"><rect width="340" height="22" rx="11" fill="#2A2A2A"/><rect width="292" height="22" rx="11" fill="#D8D8D8"/><text x="364" y="19">w 0.2</text></g>
+      <g transform="translate(0 220)"><rect width="340" height="22" rx="11" fill="#2A2A2A"/><rect width="160" height="22" rx="11" fill="#D8D8D8"/><text x="364" y="19">w 0.1</text></g>
+    </g>
+  </g>
+</svg>

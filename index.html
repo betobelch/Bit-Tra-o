@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'none'">
+  <title data-i18n="meta.title">Bit &amp; Traço — design e desenvolvimento web</title>
+  <meta name="description" content="Estúdio de duas pessoas: a Nicole desenha, o Roberto programa. Sites do primeiro rascunho ao ar, para clientes no Brasil e no exterior." data-i18n-attr="content:meta.desc">
+  <meta name="color-scheme" content="dark light">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <script src="assets/js/theme-init.js"></script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="preload" href="assets/fonts/adventor-bold.woff" as="font" type="font/woff" crossorigin>
+</head>
+<body>
+  <a class="skip" href="#conteudo" data-i18n="skip">Pular para o conteúdo</a>
+  <canvas id="bg" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="brand" href="#inicio" aria-label="Bit &amp; Traço, início" data-i18n-attr="aria-label:nav.home">
+        <svg class="brand-mark" viewBox="0 0 32 32" width="30" height="30" aria-hidden="true" focusable="false">
+          <path d="M3 25C10 25 11 14 17 14" fill="none" stroke="currentColor" stroke-width="3"/>
+          <path class="mark-steps" d="M17 14H21V10H25V6H29" fill="none" stroke-width="3"/>
+        </svg>
+        <span class="brand-name">Bit &amp; Traço</span>
+      </a>
+
+      <div class="panel" id="panel">
+        <nav id="nav" class="nav" aria-label="Principal" data-i18n-attr="aria-label:nav.aria">
+          <a href="#servicos" data-i18n="nav.services">Serviços</a>
+          <a href="#cases" data-i18n="nav.cases">Projetos</a>
+          <a href="#sobre" data-i18n="nav.about">Sobre nós</a>
+          <a href="#processo" data-i18n="nav.process">Processo</a>
+          <a href="#contato" data-i18n="nav.contact">Contato</a>
+        </nav>
+        <div class="panel-tools">
+          <div class="seg" role="group" aria-label="Idioma" data-i18n-attr="aria-label:lang.aria">
+            <button type="button" data-lang="pt" aria-pressed="true" lang="pt">PT</button>
+            <button type="button" data-lang="en" aria-pressed="false" lang="en">EN</button>
+          </div>
+          <button type="button" class="icon-btn" id="anim-btn" aria-pressed="false" aria-label="Pausar animação de fundo">
+            <svg class="ico-pause" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+              <path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z" fill="currentColor"/>
+            </svg>
+            <svg class="ico-play" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+              <path d="M7 4.5v15l12-7.5z" fill="currentColor"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <button type="button" class="icon-btn" id="theme-btn" aria-label="Mudar para o tema claro">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/>
+        </svg>
+      </button>
+      <button type="button" class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="panel" data-i18n="menu.label">Menu</button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section id="inicio" class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero-inner">
+        <h1 id="hero-title" data-i18n="hero.title">Sites desenhados e programados pela mesma dupla.</h1>
+        <p class="lead" data-i18n="hero.lead">A Nicole desenha no Figma e o Roberto transforma o desenho em código. Você conversa com quem faz, do primeiro rascunho ao site no ar.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#cases" data-i18n="hero.cta1">Ver projetos</a>
+          <a class="btn" href="#contato" data-i18n="hero.cta2">Falar com a gente</a>
+        </div>
+      </div>
+      <div class="wrap hero-legend mono" aria-hidden="true">
+        <span data-i18n="hero.legendL">desenho</span>
+        <span class="legend-line"></span>
+        <span data-i18n="hero.legendR">código</span>
+      </div>
+    </section>
+
+    <section id="servicos" class="section" aria-labelledby="servicos-title">
+      <div class="wrap split">
+        <h2 id="servicos-title" class="section-title" data-i18n="services.title">O que fazemos</h2>
+        <ul class="services">
+          <li class="service">
+            <h3 data-i18n="svc1.t">Sites institucionais e portfólios</h3>
+            <p data-i18n="svc1.d">Páginas claras e rápidas para apresentar sua empresa ou o seu trabalho, em um ou dois idiomas.</p>
+            <ul class="tags mono"><li data-i18n="tag.design">design</li><li data-i18n="tag.frontend">front-end</li></ul>
+          </li>
+          <li class="service">
+            <h3 data-i18n="svc2.t">Cardápios, lojas e pedidos online</h3>
+            <p data-i18n="svc2.d">Do catálogo ao carrinho e ao checkout, pensados para quem compra pelo celular.</p>
+            <ul class="tags mono"><li data-i18n="tag.design">design</li><li data-i18n="tag.frontend">front-end</li></ul>
+          </li>
+          <li class="service">
+            <h3 data-i18n="svc3.t">Identidade visual e interfaces</h3>
+            <p data-i18n="svc3.d">Cores, tipografia e telas desenhadas no Figma, com um design system pronto para o código.</p>
+            <ul class="tags mono"><li data-i18n="tag.design">design</li></ul>
+          </li>
+          <li class="service">
+            <h3 data-i18n="svc4.t">Revisão e segurança de código</h3>
+            <p data-i18n="svc4.d">Lemos o código que você já tem, apontamos falhas como SQL Injection e XSS e entregamos a correção testada.</p>
+            <ul class="tags mono"><li data-i18n="tag.security">segurança</li><li data-i18n="tag.tests">testes</li></ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="cases" class="section" aria-labelledby="cases-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="cases-title" class="section-title" data-i18n="cases.title">Projetos</h2>
+          <p class="section-lead" data-i18n="cases.lead">Alguns projetos que mostram como pensamos e trabalhamos.</p>
+        </div>
+
+        <div class="showcase">
+          <div class="tabs" role="tablist" aria-label="Projetos" data-i18n-attr="aria-label:cases.tabs" hidden></div>
+        <article class="case" id="case-1">
+          <div class="case-bar mono" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span>yakisoba-lucky</span></div>
+          <div class="case-main">
+          <figure class="case-shot">
+            <img src="assets/img/cases/yakisoba-lucky.webp" width="1200" height="750" decoding="async"
+                 alt="Tela inicial do protótipo Yakisoba Lucky: fundo escuro com uma tigela de yakisoba em destaque." data-i18n-attr="alt:case1.alt">
+          </figure>
+          <div class="case-body">
+            <h3>Yakisoba Lucky</h3>
+            <p class="case-kind mono" data-i18n="case1.kind">Protótipo de site para restaurante</p>
+            <p data-i18n="case1.d">Sete páginas: home, cardápio, produto, carrinho, checkout, confirmação e a página do design system.</p>
+            <ul class="tags mono"><li class="tag-own" data-i18n="tag.own">projeto próprio</li><li data-i18n="tag.design">design</li><li data-i18n="tag.frontend">front-end</li></ul>
+          </div>
+          </div>
+        </article>
+        <article class="case" id="case-2">
+          <div class="case-bar mono" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span>secure-code-review</span></div>
+          <div class="case-main">
+          <figure class="case-shot">
+            <img src="assets/img/cases/secure-code-review.webp" width="1200" height="750" decoding="async"
+                 alt="Demonstração de XSS do Secure Code Review: o script injetado aparece rodando dentro de um quadro isolado." data-i18n-attr="alt:case2.alt">
+          </figure>
+          <div class="case-body">
+            <h3>Secure Code Review</h3>
+            <p class="case-kind mono" data-i18n="case2.kind">Código vulnerável, corrigido e testado</p>
+            <p data-i18n="case2.d">Dois exemplos de falha, SQL Injection e XSS, cada um com a versão vulnerável, a versão corrigida, testes automatizados (30 no total) e um relatório. A página de apresentação traz uma demonstração de XSS isolada em sandbox.</p>
+            <ul class="tags mono"><li class="tag-own" data-i18n="tag.own">projeto próprio</li><li data-i18n="tag.security">segurança</li><li data-i18n="tag.tests">testes</li></ul>
+          </div>
+          </div>
+        </article>
+        <article class="case" id="case-3">
+          <div class="case-bar mono" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span>ai-code-evaluation</span></div>
+          <div class="case-main">
+          <figure class="case-shot">
+            <img src="assets/img/cases/ai-code-evaluation.svg" width="1200" height="750" decoding="async"
+                 alt="Ilustração de um trecho de código com a linha do bug marcada em vermelho e a correção em verde." data-i18n-attr="alt:case3.alt">
+          </figure>
+          <div class="case-body">
+            <h3>AI Code Evaluation</h3>
+            <p class="case-kind mono" data-i18n="case3.kind">Avaliação de código com IA</p>
+            <p data-i18n="case3.d">Um fluxo para avaliar código com apoio de IA: encontrar o bug, explicar o motivo e propor a correção.</p>
+            <ul class="tags mono"><li data-i18n="tag.ai">IA</li><li data-i18n="tag.code">código</li></ul>
+          </div>
+          </div>
+        </article>
+        <article class="case" id="case-4">
+          <div class="case-bar mono" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span>ai-skill-tester</span></div>
+          <div class="case-main">
+          <figure class="case-shot">
+            <img src="assets/img/cases/ai-skill-tester.svg" width="1200" height="750" decoding="async"
+                 alt="Ilustração de um medidor de 0 a 100 ao lado de barras de critérios com pesos." data-i18n-attr="alt:case4.alt">
+          </figure>
+          <div class="case-body">
+            <h3>AI Skill Tester</h3>
+            <p class="case-kind mono" data-i18n="case4.kind">Testes para skills de IA</p>
+            <p data-i18n="case4.d">Um testador que roda casos definidos em um arquivo e dá uma nota de 0 a 100, somando critérios com pesos diferentes.</p>
+            <ul class="tags mono"><li data-i18n="tag.ai">IA</li><li data-i18n="tag.tests">testes</li></ul>
+          </div>
+          </div>
+        </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre" class="section" aria-labelledby="sobre-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="sobre-title" class="section-title" data-i18n="about.title">Sobre nós</h2>
+          <p class="section-lead" data-i18n="about.lead">Somos uma dupla de design e desenvolvimento web. Atendemos clientes no Brasil e no exterior, em português e em inglês.</p>
+        </div>
+        <div class="people">
+          <article class="person person-soft">
+            <div class="avatar" aria-hidden="true">N</div>
+            <h3>Nicole</h3>
+            <p class="role mono" data-i18n="about.nicole.role">Designer</p>
+            <p data-i18n="about.nicole.d">Cuida da identidade visual e das telas no Figma. Define como o site deve parecer e como a pessoa vai usá-lo.</p>
+          </article>
+          <article class="person person-rigid">
+            <div class="avatar" aria-hidden="true">R</div>
+            <h3>Roberto</h3>
+            <p class="role mono" data-i18n="about.roberto.role">Dev Web</p>
+            <p data-i18n="about.roberto.d">Programa o site e cuida de desempenho, segurança e publicação. Garante que o desenho chegue ao navegador como foi pensado.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="processo" class="section" aria-labelledby="processo-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="processo-title" class="section-title" data-i18n="process.title">Como trabalhamos</h2>
+        </div>
+        <ol class="steps">
+          <li class="step step-both">
+            <span class="marker mono" aria-hidden="true">1</span>
+            <h3 data-i18n="step1.t">Conversa</h3>
+            <p data-i18n="step1.d">Entendemos o seu objetivo, o seu público e o prazo.</p>
+            <p class="who mono" data-i18n="who.both">Nicole e Roberto</p>
+          </li>
+          <li class="step step-design">
+            <span class="marker mono" aria-hidden="true">2</span>
+            <h3 data-i18n="step2.t">Desenho</h3>
+            <p data-i18n="step2.d">A Nicole desenha as telas no Figma. Você aprova antes de qualquer linha de código.</p>
+            <p class="who mono" data-i18n="who.nicole">Nicole</p>
+          </li>
+          <li class="step step-code">
+            <span class="marker mono" aria-hidden="true">3</span>
+            <h3 data-i18n="step3.t">Código</h3>
+            <p data-i18n="step3.d">O Roberto programa o site e testa no celular e no computador.</p>
+            <p class="who mono" data-i18n="who.roberto">Roberto</p>
+          </li>
+          <li class="step step-both">
+            <span class="marker mono" aria-hidden="true">4</span>
+            <h3 data-i18n="step4.t">Entrega</h3>
+            <p data-i18n="step4.d">Publicamos o site e mostramos como atualizá-lo.</p>
+            <p class="who mono" data-i18n="who.both">Nicole e Roberto</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="contato" class="section" aria-labelledby="contato-title">
+      <div class="wrap split">
+        <div class="contact-intro">
+          <h2 id="contato-title" class="section-title" data-i18n="contact.title">Vamos conversar sobre o seu projeto</h2>
+          <p class="section-lead" data-i18n="contact.lead">Conte o que você precisa e respondemos por e-mail.</p>
+          <div class="email-box">
+            <p class="mono email-label" data-i18n="contact.emailLabel">E-mail</p>
+            <p class="email-row">
+              <span class="email-addr mono" id="email-addr">ola@example.com</span>
+              <button type="button" class="btn btn-small" id="copy-btn" data-i18n="contact.copy">Copiar e-mail</button>
+            </p>
+            <p class="status" id="copy-status" role="status" aria-live="polite"></p>
+          </div>
+        </div>
+
+        <form class="form" id="contact-form" novalidate>
+          <div class="field">
+            <label for="f-name" data-i18n="form.name">Nome</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required maxlength="120">
+            <p class="field-error" id="f-name-err" hidden></p>
+          </div>
+          <div class="field">
+            <label for="f-email" data-i18n="form.email">Seu e-mail</label>
+            <input id="f-email" name="email" type="email" autocomplete="email" required maxlength="160">
+            <p class="field-error" id="f-email-err" hidden></p>
+          </div>
+          <div class="field">
+            <label for="f-msg" data-i18n="form.msg">Sobre o projeto</label>
+            <textarea id="f-msg" name="message" rows="5" required maxlength="3000" placeholder="O que você quer criar? Para quando?" data-i18n-attr="placeholder:form.msgPh"></textarea>
+            <p class="field-error" id="f-msg-err" hidden></p>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary" id="submit-btn" data-i18n="form.submit">Enviar mensagem</button>
+            <p class="status" id="form-status" role="status" aria-live="polite"></p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-row mono">
+      <p>© <span id="year">2026</span> Bit &amp; Traço</p>
+      <p data-i18n="footer.credit">Design: Nicole. Código: Roberto.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/i18n.js" defer></script>
+  <script src="assets/js/theme.js" defer></script>
+  <script src="assets/js/bg.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

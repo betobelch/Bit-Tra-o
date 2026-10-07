@@ -1,0 +1,13 @@
+Fontes incluídas neste site
+
+TeX Gyre Adventor (regular e bold), convertida de OpenType para WOFF sem alterar os glifos.
+Copyright 2007-2018 Bogusław Jackowski, Janusz M. Nowacki e outros, em nome dos grupos de usuários de TeX.
+Baseada na URW Gothic L. Licença: GUST Font License (GFL), uma instância da LaTeX Project Public License.
+http://www.gust.org.pl/projects/e-foundry/tex-gyre/adventor
+
+Latin Modern Mono 10 (regular), convertida de OpenType para WOFF sem alterar os glifos.
+Copyright 2003-2021 Bogusław Jackowski e Janusz M. Nowacki, em nome dos grupos de usuários de TeX.
+Projeto original (Computer Modern): Donald E. Knuth. Licença: GUST Font License (GFL).
+http://www.gust.org.pl/projects/e-foundry/latin-modern/
+
+Texto da licença: http://www.gust.org.pl/projects/e-foundry/licenses/GUST-FONT-LICENSE.txt
